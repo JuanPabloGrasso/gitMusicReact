@@ -40,14 +40,13 @@ function SideBar(){
                     </Link>
                 </li>
 
-                {/*<!-- Nav Item - Charts -->*/}
+                {/*<!-- Nav Item - Tables -->*/}
                 <li className="nav-item">
-                    <Link className="nav-link" to="/last-product">
-                        <i className="fas fa-fw fa-chart-area"></i>
-                        <span>Últimos productos</span></Link>
+                    <a className="nav-link" href="/about">
+                        <i className="fas fa-fw fa-folder"></i>
+                        <span>About</span></a>
                 </li>
 
-                {/*<!-- Nav Item - Tables -->*/}
                 <li className="nav-item">
                     <a className="nav-link" href="/">
                         <i className="fas fa-fw fa-table"></i>

@@ -2,16 +2,16 @@ import React from 'react';
 import LastProductInDb from './LastProductInDb';
 import CategoriesInDb from './CategoriesInDb';
 
-function ContentRowCenter(){
+function ContentRowCenter({lastProduct, categories}){
     return (
         <div className="row">
             
             {/*<!-- Last Product in DB -->*/}
-            <LastProductInDb />
+            <LastProductInDb product={lastProduct} />
             {/*<!-- End content row last movie in Data Base -->*/}
 
             {/*<!-- Categorías in DB -->*/}
-            <CategoriesInDb />
+            <CategoriesInDb categories={categories}/>
 
         </div>
     )

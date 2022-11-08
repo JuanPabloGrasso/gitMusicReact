@@ -1,7 +1,6 @@
 import React from 'react';
-import imagenFondo from '../assets/images/ludwingBateria.webp';
 
-function LastProductInDb(){
+function LastProductInDb({product}){
     return(
         <div className="col-lg-6 mb-4">
             <div className="card shadow mb-4">
@@ -10,10 +9,12 @@ function LastProductInDb(){
                 </div>
                 <div className="card-body">
                     <div className="text-center">
-                        <img className="img-fluid px-3 px-sm-4 mt-3 mb-4" style={{width: 40 +'rem'}} src={imagenFondo} alt=" Ludwing Clásica Maple - Bateria "/>
+                        <img className="img-fluid px-3 px-sm-4 mt-3 mb-4" style={{width: 40 +'rem'}} src={`http://localhost:3000/images/products/${product?.imagen}`} alt=" Ludwing Clásica Maple - Bateria "/>
                     </div>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, consequatur explicabo officia inventore libero veritatis iure voluptate reiciendis a magnam, vitae, aperiam voluptatum non corporis quae dolorem culpa citationem ratione aperiam voluptatum non corporis ratione aperiam voluptatum quae dolorem culpa ratione aperiam voluptatum?</p>
-                    <a className="btn btn-danger" target="_blank" rel="nofollow" href="/">Ver detalles del producto</a>
+                    <p>
+                        {product?.description}
+                    </p>
+                    <a className="btn btn-danger" target="_blank" rel="nofollow" href={`http://localhost:3000/products/${product?.id}`}>Ver detalles del producto</a>
                 </div>
             </div>
         </div>

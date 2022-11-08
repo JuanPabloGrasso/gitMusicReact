@@ -7,9 +7,9 @@ import {
 import SideBar from './SideBar';
 import ContentWrapper from './ContentWrapper';
 import CategoriesInDb from './CategoriesInDb';
-import LastProductInDb from './LastProductInDb';
 import ContentRowProyect from './ContentRowProyect';
 import NotFound from './NotFound';
+import About from './About';
 
 function App() {
   return (
@@ -18,8 +18,8 @@ function App() {
         <SideBar />
         <Routes>
           <Route path='/' element={<ContentWrapper />} />
+          <Route path='/about' element={<About />} />
           <Route path='/categories' element={<CategoriesInDb />} />
-          <Route path='/last-product' element={<LastProductInDb />} />
           <Route path='/products' element={<ContentRowProyect />} />
           <Route path='*' element={<NotFound />} />
         </Routes>

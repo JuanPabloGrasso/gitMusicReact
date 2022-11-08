@@ -1,6 +1,6 @@
 import React from "react";
 
-class LastProductInDb extends React.Component {
+class CategoriesInDb extends React.Component {
   state = {
     overTitle: false
   }
@@ -59,4 +59,4 @@ class LastProductInDb extends React.Component {
   }
 }
 
-export default LastProductInDb;
+export default CategoriesInDb;

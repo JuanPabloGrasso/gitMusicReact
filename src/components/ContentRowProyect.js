@@ -1,57 +1,39 @@
 import React, { useState, useEffect } from 'react';
 import SmallCard from './SmallCard';
-import axios from 'axios';
 
-/*  Cada set de datos es un objeto literal */
+function ContentRowProyect({ totalProducts, totalUsers, totalCategories }) {
+    const data = [
+        {
+            title: 'Total de productos',
+            color: 'success',
+            total: totalProducts,
+            icon: 'fa-clipboard-list'
+        },
+        {
+            title: ' Total de categorías',
+            color: 'danger',
+            total: totalCategories,
+            icon: 'fa-award'
+        },
+        {
+            title: 'Total de usuarios',
+            color: 'secondary',
+            total: totalUsers,
+            icon: 'fa-user-check'
+        }]
 
-/* <!-- Movies in DB --> */
-
-let productsInDB = {
-    title: 'Productos en base de datos',
-    color: 'success', 
-    cuantity: 'JUAMPI',
-    icon: 'fa-clipboard-list'
-}
-
-/* <!-- Total awards --> */
-
-let totalCategories = {
-    title:' Total de categorías', 
-    color:'danger', 
-    cuantity: '6',
-    icon:'fa-award'
-}
-
-/* <!-- Actors quantity --> */
-
-let usersQuantity = {
-    title:'Cantidad de usuarios' ,
-    color:'secondary',
-    cuantity:'6',
-    icon:'fa-user-check'
-}
-
-
-function ContentRowProyect(){
-    let cartProps = [productsInDB, totalCategories, usersQuantity];
-    const [product, setProduct] = useState();
-
-    useEffect(() => {
-        axios.get('http://localhost:3000/api/product').then(
-            data => setProduct(data.data))
-    }, [])
     return (
-
-        <div className="row">
+        <div className='row'>
             {
-                product?.length
+                data.map(element =>
+                    <SmallCard
+                        title={element.title}
+                        color={element.color}
+                        icon={element.icon}
+                        total={element.total}
+                    />
+                )
             }
-            {cartProps.map((product, i) => {
-
-                return <SmallCard {...product} key={i} />
-
-            })}
-
         </div>
     )
 }
