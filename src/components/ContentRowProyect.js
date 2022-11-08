@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import SmallCard from './SmallCard';
+import axios from 'axios';
 
 /*  Cada set de datos es un objeto literal */
 
@@ -8,7 +9,7 @@ import SmallCard from './SmallCard';
 let productsInDB = {
     title: 'Productos en base de datos',
     color: 'success', 
-    cuantity: 20,
+    cuantity: 'JUAMPI',
     icon: 'fa-clipboard-list'
 }
 
@@ -30,17 +31,25 @@ let usersQuantity = {
     icon:'fa-user-check'
 }
 
-let cartProps = [productsInDB, totalCategories, usersQuantity];
 
 function ContentRowProyect(){
-    return (
-    
-        <div className="row">
-            
-            {cartProps.map( (movie, i) => {
+    let cartProps = [productsInDB, totalCategories, usersQuantity];
+    const [product, setProduct] = useState();
 
-                return <SmallCard {...movie} key={i}/>
-            
+    useEffect(() => {
+        axios.get('http://localhost:3000/api/product').then(
+            data => setProduct(data.data))
+    }, [])
+    return (
+
+        <div className="row">
+            {
+                product?.length
+            }
+            {cartProps.map((product, i) => {
+
+                return <SmallCard {...product} key={i} />
+
             })}
 
         </div>
