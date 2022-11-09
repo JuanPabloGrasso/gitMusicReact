@@ -18,7 +18,10 @@ function ContentRowTop({ products, totalProducts, users, totalUsers, categories,
 					totalProducts={totalProducts}
 					totalUsers={totalUsers}
 				/>
-				<ContentRowCenter lastProduct={products[products?.length-1]} />
+				<ContentRowCenter
+					lastProduct={products[products?.length - 1]}
+					categories={categories}
+				/>
 				<Chart />
 
 			</div>

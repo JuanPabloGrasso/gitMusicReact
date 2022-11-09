@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 
-const CategoriesInDb = ({ categories }) => {
+const CategoriesInDb = () => {
     const [overTitle, setOverTitle] = useState(false);
 
     const handleMouseOver = async () => {
@@ -20,9 +20,7 @@ const CategoriesInDb = ({ categories }) => {
                     <div className="row">
                         <div className="col-lg-6 mb-4">
                             <div className="card bg-dark text-white shadow">
-                                <div className="card-body">
-                                  {categories?.name}
-                                </div>
+                                <div className="card-body">Amplificadores</div>
                             </div>
                         </div>
                         <div className="col-lg-6 mb-4">
