@@ -1,7 +1,6 @@
 import React from 'react';
 import ContentRowCenter from './ContentRowCenter';
 import ContentRowProyect from './ContentRowProyect';
-import Chart from './Chart';
 
 function ContentRowTop({ products, totalProducts, users, totalUsers, categories, totalCategories }) {
 	return (
@@ -22,7 +21,6 @@ function ContentRowTop({ products, totalProducts, users, totalUsers, categories,
 					lastProduct={products[products?.length - 1]}
 					categories={categories}
 				/>
-				<Chart />
 
 			</div>
 			{/*<!--End Content Row Top-->*/}
