@@ -21,7 +21,7 @@ function SideBar(){
 
                 {/*<!-- Nav Item - Dashboard -->*/}
                 <li className="nav-item active">
-                    <Link className="nav-link" to="/products">
+                    <Link className="nav-link" to="/">
                         <i className="fas fa-fw fa-tachometer-alt"></i>
                         <span>Dashboard - Git Music</span></Link>
                 </li>
@@ -32,25 +32,11 @@ function SideBar(){
                 {/*<!-- Heading -->*/}
                 <div className="sidebar-heading">Actions</div>
 
-                {/*<!-- Nav Item - Pages -->*/}
-                <li className="nav-item">
-                    <Link className="nav-link collapsed" to="/categories">
-                        <i className="fas fa-fw fa-folder"></i>
-                        <span>Categorías</span>
-                    </Link>
-                </li>
-
                 {/*<!-- Nav Item - Tables -->*/}
                 <li className="nav-item">
                     <a className="nav-link" href="/about">
                         <i className="fas fa-fw fa-folder"></i>
                         <span>About</span></a>
-                </li>
-
-                <li className="nav-item">
-                    <a className="nav-link" href="/">
-                        <i className="fas fa-fw fa-table"></i>
-                        <span>Tablas</span></a>
                 </li>
 
                 {/*<!-- Divider -->*/}
